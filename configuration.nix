@@ -82,7 +82,7 @@ in
     package = "pkgs.greetd.tuigreet";
     settings = rec {
       initial_session = {
-        command = "${pkgs.sway}/bin/hyprland";
+        command = "${pkgs.hyprland}/bin/hyprland";
         };
       default_session = initial_session;
     };
