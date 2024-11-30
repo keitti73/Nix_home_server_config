@@ -79,11 +79,12 @@ in
   #greetd
   services.greetd = {
     enable = true;
-    package = "pkgs.greetd.tuigreet";
+    package = "pkgs.greetd.wlgreet";
     settings = rec {
       initial_session = {
         command = "${pkgs.hyprland}/bin/hyprland";
-        };
+        user ="keitti73";
+      };
       default_session = initial_session;
     };
   };
