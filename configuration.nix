@@ -88,6 +88,11 @@ in
       default_session = initial_session;
     };
   };
+
+  # swaylock
+  # https://discourse.nixos.org/t/swaylock-wont-unlock/27275
+  security.pam.services.swaylock = { };
+  security.pam.services.swaylock.fprintAuth = false;
   
 
   # Configure keymap in X11
@@ -164,6 +169,8 @@ in
     niv
     kitty
     waybar
+    xdg-desktop-portal-hyprland
+    swaylock
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
@@ -271,4 +278,12 @@ in
 
   # Optional, hint Electron apps to use Wayland:
   environment.sessionVariables.NIXOS_OZONE_WL = "1";
+
+ 
+  xdg.portal = {
+    enable = true;
+    extraPortals = with pkgs; [
+      xdg-desktop-portal-hyprland
+    ];
+  };
 }
