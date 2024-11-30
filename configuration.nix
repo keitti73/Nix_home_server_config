@@ -70,12 +70,23 @@ in
  };
 
   # Enable the X11 windowing system.
-  services.xserver.enable = true;
-  services.xserver.displayManager.gdm = {
-    enable = true;
-    wayland = true;
-  };
+  # services.xserver.enable = true;
+  # services.xserver.displayManager.gdm = {
+  #   enable = true;
+  #   wayland = true;
+  # };
 
+  #greetd
+  services.greetd = {
+    enable = true;
+    package = "pkgs.greetd.tuigreet";
+    settings = rec {
+      initial_session = {
+        command = "${pkgs.sway}/bin/hyprland";
+        };
+      default_session = initial_session;
+    };
+  };
   
 
   # Configure keymap in X11
