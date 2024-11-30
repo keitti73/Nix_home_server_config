@@ -170,7 +170,7 @@ in
     kitty
     waybar
     xdg-desktop-portal-hyprland
-    swaylock
+    swaylock-effects
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
