@@ -59,7 +59,8 @@ in
   
   #入力メソッド
   i18n.inputMethod = {
-    enabled = "fcitx5";
+    enable = true; 
+    type = "fcitx5";
     fcitx5.addons = [pkgs.fcitx5-mozc pkgs.fcitx5-gtk pkgs.fcitx5-anthy];
     fcitx5.waylandFrontend = true;
  };
@@ -214,7 +215,14 @@ in
   # and migrated your data accordingly.
   #
   # For more information, see `man configuration.nix` or https://nixos.org/manual/nixos/stable/options#opt-system.stateVersion .
-  system.stateVersion = "24.11"; # Did you read the comment?
+  system.stateVersion = "24.05"; # Did you read the comment?
+
+  system.autoUpgrade.enable  = true;
+  system.autoUpgrade.allowReboot  = true;
+
+
+  # Enable the Flakes feature and the accompanying new nix command-line tool
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
   programs = {
     git = {
