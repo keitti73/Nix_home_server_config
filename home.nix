@@ -10,11 +10,6 @@
     userName = "keitti73";
     userEmail = "keitti73@gmail.com";
   };
-
-    programs.gh = {
-    enable = true;
-    extensions = with pkgs; [gh-markdown-preview];
-  };
-
+  
   programs.home-manager.enable = true; # home-manager自身でhome-managerを有効化
 }
