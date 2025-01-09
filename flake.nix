@@ -17,7 +17,7 @@
       nixos-1 = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         modules = [
-          ./configuration.nix;
+          ./configuration.nix
           lanzaboote.nixosModules.lanzaboote
 
           ({ pkgs, lib, ... }: {
