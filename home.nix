@@ -10,6 +10,8 @@
     userName = "keitti73";
     userEmail = "keitti73@gmail.com";
   };
-  
+
+home.packages = [pkgs.vscode];
+
   programs.home-manager.enable = true; # home-manager自身でhome-managerを有効化
 }
