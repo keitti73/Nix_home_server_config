@@ -3,25 +3,19 @@
 # https://search.nixos.org/options and in the NixOS manual (`nixos-help`).
 
 { config, lib, pkgs, ... }:
-let
-    sources = import ./nix/sources.nix;
-    lanzaboote = import sources.lanzaboote;
-in
 {
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
       ./ssh.nix
-      lanzaboote.nixosModules.lanzaboote
     ];
-
   # Use the systemd-boot EFI boot loader.
-  boot.loader.systemd-boot.enable = lib.mkForce false;
-  boot.loader.efi.canTouchEfiVariables = true;
-  boot.lanzaboote = {
-    enable = true;
-    pkiBundle = "/etc/secureboot";
-  };
+  #boot.loader.systemd-boot.enable = lib.mkForce false;
+  #boot.loader.efi.canTouchEfiVariables = true;
+  #boot.lanzaboote = {
+  #  enable = true;
+  #  pkiBundle = "/etc/secureboot";
+  #};
 
   networking.hostName = "nixos-1"; # Define your hostname.
   # Pick only one of the below networking options.
