@@ -216,9 +216,6 @@
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
   programs = {
-    git = {
-      enable = true;
-    };
     zsh = {
       enable = true;
       enableCompletion = true;
