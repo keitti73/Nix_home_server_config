@@ -254,7 +254,7 @@
   services.tailscale.enable = true;
 
   networking.firewall = {
-   enable = true;
+   enable = false;
    # tailscaleの仮想NICを信頼する
    # `<Tailscaleのホスト名>:<ポート番号>`のアクセスが可能になる
    trustedInterfaces = ["tailscale0"];
