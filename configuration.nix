@@ -164,6 +164,7 @@
     waybar
     xdg-desktop-portal-hyprland
     swaylock-effects
+    docker-compose
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
