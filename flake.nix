@@ -12,13 +12,13 @@
     };
   };
 
-  outputs = { self, nixpkgs }: {
+  outputs = { self, nixpkgs, lanzaboote}: {
     nixosConfigurations = {
       nixos-1 = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         modules = [
           ./configuration.nix
-          
+
           lanzaboote.nixosModules.lanzaboote
 
           ({ pkgs, lib, ... }: {
