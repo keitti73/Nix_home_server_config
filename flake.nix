@@ -18,6 +18,7 @@
         system = "x86_64-linux";
         modules = [
           ./configuration.nix
+          
           lanzaboote.nixosModules.lanzaboote
 
           ({ pkgs, lib, ... }: {
