@@ -107,7 +107,7 @@
   #   enable = true;
   #   pulse.enable = true;
   # };
-  hardware.pulseaudio.enable = false;
+  services.pulseaudio.enable = false;
   security.rtkit.enable = true;
   services.pipewire = {
     enable = true;
