@@ -1,3 +1,4 @@
+{ config, pkgs, ... }:
 {
   home = rec { # recでAttribute Set内で他の値を参照できるようにする
     username="keitti73";
