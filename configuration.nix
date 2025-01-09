@@ -144,9 +144,6 @@
     description = "keitti73";
     extraGroups = [ "networkmanager" "wheel" "docker" ];
     hashedPassword = "$6$uHpiZlzGycec65K7$Gb7teOJ1bImvzrNKeGn2tKLJr5g1DSQfxEX0pbnHt3xEae5hH46EIUGd5fPOZLBgs09vIVuR7LL8cbP1xwUzc1";
-    packages = with pkgs; [
-    #  thunderbird
-    ];
   };
   
   users.mutableUsers = false;
